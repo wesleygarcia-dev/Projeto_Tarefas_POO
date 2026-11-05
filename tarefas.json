@@ -1,0 +1,41 @@
+{
+    "nome": "Aluno",
+    "tarefas": [
+        {
+            "tipo": "Casa: Cozinha e sala",
+            "titulo": "Limpeza",
+            "descricao": "Limpar a casa",
+            "concluida": false,
+            "comodo": "Cozinha e sala",
+            "classe": "casa"
+        },
+        {
+            "tipo": "Comum",
+            "titulo": "limpeza",
+            "descricao": "limpar a casa",
+            "concluida": false,
+            "classe": "comum"
+        },
+        {
+            "tipo": "Comum",
+            "titulo": "Estudar",
+            "descricao": "Limpar a casa",
+            "concluida": true,
+            "classe": "comum"
+        },
+        {
+            "tipo": "Comum",
+            "titulo": "Estudar",
+            "descricao": "Limpar casa",
+            "concluida": false,
+            "classe": "comum"
+        },
+        {
+            "tipo": "Comum",
+            "titulo": "limpar casa",
+            "descricao": "limpar o barraco",
+            "concluida": true,
+            "classe": "comum"
+        }
+    ]
+}

@@ -15,3 +15,4 @@ class Tarefa:
 
     def mostrar(self):
         situacao = "Concluida" if self.__concluida else "Pendente"
+        return f"[{situacao}] {self.titulo} - {self.descricao} ({self.tipo()})"
