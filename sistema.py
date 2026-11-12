@@ -9,28 +9,52 @@ class Sistema:
         self.usuario = Usuario("Aluno")
         self.arquivo = ArquivoTarefas()
         self.arquivo.carregar(self.usuario)
-
     def cadastrar(self):
         print("\n1 - Comum | 2 - Estudo | 3 - Casa")
         tipo = input("Tipo: ").strip()
+
         if tipo not in ("1", "2", "3"):
             print("Tipo invalido.")
             return
+
         titulo = input("Titulo: ").strip()
-        descricao = input("Descricao: ").strip()
+
         if not titulo:
             print("O titulo nao pode estar vazio.")
             return
+
+        descricao = input("Descricao: ").strip()
+
+        if not descricao:
+            print("A descricao nao pode estar vazia.")
+            return
+
         if tipo == "2":
-            tarefa = TarefaEstudo(titulo, descricao, input("Materia: ").strip())
+            materia = input("Materia: ").strip()
+
+            if not materia:
+                print("A materia nao pode estar vazia.")
+                return
+
+            tarefa = TarefaEstudo(titulo, descricao, materia)
+
         elif tipo == "3":
-            tarefa = TarefaCasa(titulo, descricao, input("Comodo: ").strip())
+            comodo = input("Comodo: ").strip()
+
+            if not comodo:
+                print("O comodo nao pode estar vazio.")
+                return
+
+            tarefa = TarefaCasa(titulo, descricao, comodo)
+
         else:
             tarefa = Tarefa(titulo, descricao)
+
         self.usuario.adicionar_tarefa(tarefa)
         self.arquivo.salvar(self.usuario)
-        print("Tarefa cadastrada!")
 
+        print("Tarefa cadastrada!")
+    
     def executar(self):
         while True:
             print("\n=== CONTROLE DE TAREFAS ===")
