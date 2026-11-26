@@ -53,7 +53,7 @@ class Sistema:
         self.usuario.adicionar_tarefa(tarefa)
         self.arquivo.salvar(self.usuario)
 
-        print("Tarefa cadastrada!")
+        print("Tarefa entendida!")
     
     def executar(self):
         while True:
@@ -86,7 +86,7 @@ class Sistema:
                     print("Tarefa nao encontrada.")
             elif opcao == "0":
                 self.arquivo.salvar(self.usuario)
-                print("Ate logo!")
+                print("Ate a Próxima Tarefa!")
                 break
             else:
-                print("Opcao invalida.")
+                print("essa opçao não deu irmão.")
